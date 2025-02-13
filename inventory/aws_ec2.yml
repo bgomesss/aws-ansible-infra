@@ -1,0 +1,12 @@
+plugin: aws_ec2
+regions:
+  - sa-east-1
+filters:
+  instance-state-name: running
+  instance-id: i-0b39cc4f0daf8c40f
+hostnames:
+  - tag:Name
+  - dns-name
+  - ip-address
+keyed_groups:
+  - key: tags.Name
